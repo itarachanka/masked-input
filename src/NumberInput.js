@@ -2,7 +2,7 @@ import {PropTypes} from 'react';
 import MaskedInput from './MaskedInput';
 import NumberMask from './NumberMask';
 
-const strRepeat = function(str, qty){
+function strRepeat(str, qty) {
     if (qty < 1) return '';
     var result = '';
     while (qty > 0) {
@@ -17,7 +17,6 @@ const strRepeat = function(str, qty){
  * 
  * @class NumberInput
  * @extends MaskedInput
- * @constructor
  * @usage: 
  *      // Mask number as string
  *      <NumberInput mask={# ###} value={4000} />

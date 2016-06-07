@@ -10,8 +10,8 @@ module.exports = function (config) {
     files: ['test/**/*.js'],
     frameworks: ['jasmine'],
     preprocessors: {
-        'test/**/*.js': ['webpack'],
-        'src/**/*.js': ['webpack']
+      'test/**/*.js': ['webpack'],
+      'src/**/*.js': ['webpack']
     },
     reporters: ['progress', 'coverage'],
     webpack: {

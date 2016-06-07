@@ -21,22 +21,12 @@ const keys = {
     TAB: 9,
     UP: 38
 };
-const strRepeat = function(str, qty){
-    if (qty < 1) return '';
-    var result = '';
-    while (qty > 0) {
-      if (qty & 1) result += str;
-      qty >>= 1, str += str;
-    }
-    return result;
-}
 
 /**
  * Masked text input widget.
  * 
  * @class MaskedInput
  * @extends React.Component
- * @constructor
  * @usage: 
  *      // Mask date
  *      <MaskedInput value="07/01/1985" mask="##//##//####" />
@@ -53,7 +43,7 @@ const strRepeat = function(str, qty){
  */
 class MaskedInput extends Component {
     static propTypes = {
-        mask: PropTypes.string,
+        mask: PropTypes.string.isRequired,
         reverse: PropTypes.bool,
         rules: PropTypes.object,
         onChange: PropTypes.func
