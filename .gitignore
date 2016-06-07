@@ -1,0 +1,8 @@
+/.settings
+/.project
+/.tern-project
+/node_modules
+/.externalToolBuilders
+/npm-debug.log
+/.DS_Store
+/build
