@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const pkg = require('./package.json');
 
 module.exports = {
   cache: false,
@@ -6,7 +7,7 @@ module.exports = {
   watch: false,
   devtool: 'source-map',
   entry: {
-    main: ['./src']
+    maskedInput: ['./src']
   },
   output: {
     path: './build',
@@ -15,7 +16,11 @@ module.exports = {
     libraryTarget: 'umd'
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.BannerPlugin([`${pkg.name} - ${pkg.description}`,
+                              `@version v${pkg.version}`,
+                              `@link ${pkg.homepage}`,
+                              `@license ${pkg.license}`].join('\n'))
   ],
   module: {
     loaders: [{
