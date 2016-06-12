@@ -1,0 +1,8 @@
+{
+  "glob": [ "**/*.js", "README.md" ],
+  "except": [ "build/**/*.*", "node_modules/**/*.*" ],
+  "out": "build/docs",
+  "index": "README.md",
+  "github": false,
+  "repository-url": "https://github.com/itarachanka/masked-input"
+}
