@@ -7,7 +7,7 @@ module.exports = {
   watch: false,
   devtool: 'source-map',
   entry: {
-    maskedInput: ['./src']
+    'masked-input': ['./src']
   },
   output: {
     path: './build',
@@ -26,7 +26,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       include: /src/,
-      loaders: ['babel-loader']
+      loaders: ['babel']
     }]
   }
 };

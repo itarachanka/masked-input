@@ -22,7 +22,7 @@ module.exports = (config) => {
           {
             test: /\.js$/,
             include: /test/,
-            loader: 'babel-loader',
+            loader: 'babel',
             query: {
               cacheDirectory: true
             }
@@ -40,7 +40,7 @@ module.exports = (config) => {
           {
             test: /\.js$/,
             include: /src/,
-            loader: 'babel-loader',
+            loader: 'babel',
             query: {
               cacheDirectory: true
             }
